@@ -20,6 +20,7 @@ fnCreate(sysMenu, true)
 fnCreate(sysRole, true)
 fnCreate(sysUser, true)
 
+
 /**
  * 创建mock模拟数据
  * @param {*} mod 模块

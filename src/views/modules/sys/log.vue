@@ -104,17 +104,17 @@
       getDataList () {
         this.dataListLoading = true
         this.$http({
-          url: this.$http.adornUrl('/sys/log/list'),
+          url: this.$http.adornUrl('/Internetofthings/Logs/showAllLog'),
           method: 'get',
           params: this.$http.adornParams({
             'page': this.pageIndex,
             'limit': this.pageSize,
-            'key': this.dataForm.key
+            //'key': this.dataForm.key
           })
         }).then(({data}) => {
           if (data && data.code === 0) {
-            this.dataList = data.page.list
-            this.totalPage = data.page.totalCount
+            this.dataList = data.content
+            this.totalPage = data.ext.size
           } else {
             this.dataList = []
             this.totalPage = 0

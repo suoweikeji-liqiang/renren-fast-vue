@@ -35,8 +35,28 @@ const mainRoutes = {
     // 提示: 如需要通过iframe嵌套展示内容, 但不通过tab打开, 请自行创建组件使用iframe处理!
     { path: '/home', component: _import('common/home'), name: 'home', meta: { title: '首页' } },
     { path: '/theme', component: _import('common/theme'), name: 'theme', meta: { title: '主题' } },
-    { path: '/demo-echarts', component: _import('demo/echarts'), name: 'demo-echarts', meta: { title: 'demo-echarts', isTab: true } },
-    { path: '/demo-ueditor', component: _import('demo/ueditor'), name: 'demo-ueditor', meta: { title: 'demo-ueditor', isTab: true } }
+    { path: '/demo-agent', component: _import('demo/agent'), name: 'demo-agent', meta: { title: 'demo-agent', isTab: true } },
+    { path: '/demo-custom', component: _import('demo/custom'), name: 'demo-custom', meta: { title: 'demo-custom', isTab: true } },
+    { path: '/demo-ueditor', component: _import('demo/ueditor'), name: 'demo-ueditor', meta: { title: 'demo-ueditor', isTab: true } },
+    { path: '/demo-equipment', component: _import('demo/equipment'), name: 'demo-equipment', meta: { title: 'demo-equipment', isTab: true } },
+    { path: '/demo-gateway', component: _import('demo/gateway'), name: 'demo-gateway', meta: { title: 'demo-gateway', isTab: true } },
+    { path: '/demo-model', component: _import('demo/model'), name: 'demo-model', meta: { title: 'demo-model', isTab: true } },
+    { path: '/monitor-equip_status', component: _import('monitor/equip_status'), name: 'monitor-equip_status', meta: { title: 'monitor-equip_status', isTab: true } },
+    { path: '/monitor-graph', component: _import('monitor/graph'), name: 'monitor-graph', meta: { title: 'monitor-graph', isTab: true } },
+    { path: '/monitor-power_data', component: _import('monitor/power_data'), name: 'monitor-power_data', meta: { title: 'monitor-power_data', isTab: true } },
+    { path: '/monitor-temperature', component: _import('monitor/temperature'), name: 'monitor-temperature', meta: { title: 'monitor-temperature', isTab: true } },
+    { path: '/monitor-pressure_data', component: _import('monitor/pressure_data'), name: 'monitor-pressure_data', meta: { title: 'monitor-pressure_data', isTab: true } },
+    { path: '/monitor-ueditor', component: _import('monitor/ueditor'), name: 'monitor-ueditor', meta: { title: 'monitor-ueditor', isTab: true } },
+    { path: '/tools-account', component: _import('tools/account'), name: 'tools-account', meta: { title: 'tools-account', isTab: true } },
+    { path: '/tools-export', component: _import('tools/export'), name: 'tools-export', meta: { title: 'tools-export', isTab: true } },
+    { path: '/tools-ueditor', component: _import('tools/ueditor'), name: 'tools-ueditor', meta: { title: 'tools-ueditor', isTab: true } },
+    { path: '/permission-ueditor', component: _import('permission/ueditor'), name: 'permission-ueditor', meta: { title: 'permission-ueditor', isTab: true } },
+    { path: '/permission-user', component: _import('permission/user'), name: 'permission-user', meta: { title: 'permission-user', isTab: true } },
+    { path: '/call-system', component: _import('call/system'), name: 'call-system', meta: { title: 'call-system', isTab: true } },
+    { path: '/call-calling', component: _import('call/calling'), name: 'call-calling', meta: { title: 'call-calling', isTab: true } },
+    { path: '/call-background', component: _import('call/background'), name: 'call-background', meta: { title: 'call-background', isTab: true } },
+    { path: '/call-ueditor', component: _import('call/ueditor'), name: 'call-ueditor', meta: { title: 'call-ueditor', isTab: true } }
+    
   ],
   beforeEnter (to, from, next) {
     let token = Vue.cookie.get('token')
